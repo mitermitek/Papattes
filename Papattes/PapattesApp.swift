@@ -12,7 +12,12 @@ import SwiftData
 struct PapattesApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            Medication.self,
+            Pet.self,
+            Reminder.self,
+            Vaccine.self,
+            VetVisit.self,
+            WeightEntry.self
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
