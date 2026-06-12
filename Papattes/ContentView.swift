@@ -10,8 +10,16 @@ import SwiftData
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Text("Hello World!")
+        TabView {
+            Tab("Rappels", systemImage: "calendar.badge.clock") {
+                RemindersView()
+            }
+            Tab("Animaux", systemImage: "pawprint") {
+                PetsView()
+            }
+            Tab("Paramètres", systemImage: "gearshape") {
+                SettingsView()
+            }
         }
     }
 }
